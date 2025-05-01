@@ -7,10 +7,13 @@ import csv
 import re
 
 # 設定
-USERNAME = "info@rukitech.net"
-PASSWORD = "Rukitech1360"
-LOGIN_URL = "https://rukitech.cybozu.com/login"
-LIST_URL = "https://rukitech.cybozu.com/k/3/"
+USERNAME = input("ユーザー名を入力してください: ")
+PASSWORD = input("パスワードを入力してください: ")
+domain = input("ログインURL(使用ドメイン、例 https://example.cybozu.com) を入力してください: ").rstrip("/")
+LOGIN_URL = f"{domain}/login"
+
+app_number = input("アプリケーションナンバーを入力してください: ")
+APP_URL_TMPL = f"{domain}/k/{app_number}/show#record={{}}"
 BASE_FOLDER = "images"
 CSV_FILENAME = "download_result.csv"
 RECORD_ID_CSV = os.path.join(os.path.dirname(os.path.abspath(__file__)), "record_ids.csv")
