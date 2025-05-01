@@ -76,7 +76,6 @@ def download_slideshow_images(session, headers, record_folder, class_name, label
                     print(f"✅ スライドDL: {label}/{fn}")
                 else:
                     print(f"❌ スライドDL失敗 HTTP {r.status_code}")
-            # モーダルを閉じる
             driver.find_element(By.TAG_NAME, "body").send_keys(Keys.ESCAPE)
             time.sleep(0.3)
 
