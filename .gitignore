@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+.env
+# ChromeDriver
+chromedriver
+# ローカルの CSV や画像
+images/
+download_result.csv
+record_ids.csv
